@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://hbmww48tdd2f"]
+
+[ext_resource type="PackedScene" path="res://player.tscn" id="1_ved16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ucop"]
+size = Vector2(1058, 20)
+
+[node name="world" type="Node2D"]
+position = Vector2(65, 533)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(519, 0)
+shape = SubResource("RectangleShape2D_1ucop")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 1048.0
+offset_bottom = 40.0
+color = Color(0.27451, 0.627451, 0.752941, 1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(2182, -91)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(519, 0)
+shape = SubResource("RectangleShape2D_1ucop")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 1048.0
+offset_bottom = 40.0
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1093, -39)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(519, 0)
+shape = SubResource("RectangleShape2D_1ucop")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 1048.0
+offset_bottom = 40.0
+color = Color(0.27451, 0.627451, 0.752941, 1)
+
+[node name="character" parent="." instance=ExtResource("1_ved16")]
+position = Vector2(506, -407)

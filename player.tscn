@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://7ck2ea6une37"]
+
+[ext_resource type="Texture2D" uid="uid://b888iplht5f73" path="res://icon.svg" id="1_47hed"]
+[ext_resource type="Script" path="res://player.gd" id="1_kt6eq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vani"]
+radius = 54.0
+height = 126.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kt6eq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_47hed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1vani")
+
+[node name="Debug_data" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="L_dir" type="Label" parent="Debug_data"]
+layout_mode = 0
+offset_left = -72.0
+offset_top = -291.0
+offset_right = -8.0
+offset_bottom = -221.0
+theme_override_font_sizes/font_size = 48
+text = "dir"
+
+[node name="L_vel" type="Label" parent="Debug_data"]
+layout_mode = 0
+offset_left = -75.0
+offset_top = -195.0
+offset_right = -8.0
+offset_bottom = -125.0
+theme_override_font_sizes/font_size = 48
+text = "vel"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
+position_smoothing_enabled = true
