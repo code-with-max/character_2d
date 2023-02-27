@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cr2kyb5p02t12"]
 
 [ext_resource type="Texture2D" uid="uid://b888iplht5f73" path="res://icon.svg" id="1_47hed"]
-[ext_resource type="Script" path="res://player.gd" id="1_kt6eq"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_yd7bv"]
 [ext_resource type="Script" path="res://player/fsm/FSM.gd" id="3_udrmt"]
 [ext_resource type="Script" path="res://player/fsm/idle.gd" id="4_a3jc2"]
 [ext_resource type="Script" path="res://player/fsm/run.gd" id="5_vs1mx"]
@@ -12,7 +12,7 @@ radius = 54.0
 height = 126.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_kt6eq")
+script = ExtResource("1_yd7bv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_47hed")
