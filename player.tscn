@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://7ck2ea6une37"]
+[gd_scene load_steps=8 format=3 uid="uid://cr2kyb5p02t12"]
 
 [ext_resource type="Texture2D" uid="uid://b888iplht5f73" path="res://icon.svg" id="1_47hed"]
 [ext_resource type="Script" path="res://player.gd" id="1_kt6eq"]
+[ext_resource type="Script" path="res://player/fsm/FSM.gd" id="3_udrmt"]
+[ext_resource type="Script" path="res://player/fsm/idle.gd" id="4_a3jc2"]
+[ext_resource type="Script" path="res://player/fsm/run.gd" id="5_vs1mx"]
+[ext_resource type="Script" path="res://player/fsm/air.gd" id="6_1cudt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vani"]
 radius = 54.0
@@ -22,24 +26,40 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="L_dir" type="Label" parent="Debug_data"]
+[node name="VBox" type="VBoxContainer" parent="Debug_data"]
 layout_mode = 0
 offset_left = -72.0
-offset_top = -291.0
-offset_right = -8.0
-offset_bottom = -221.0
+offset_top = -356.0
+offset_right = -5.0
+offset_bottom = -212.0
+
+[node name="L_dir" type="Label" parent="Debug_data/VBox"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "dir"
 
-[node name="L_vel" type="Label" parent="Debug_data"]
-layout_mode = 0
-offset_left = -75.0
-offset_top = -195.0
-offset_right = -8.0
-offset_bottom = -125.0
+[node name="L_vel" type="Label" parent="Debug_data/VBox"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "vel"
 
+[node name="L_state" type="Label" parent="Debug_data/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "state"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.8, 0.8)
-position_smoothing_enabled = true
+
+[node name="FSM" type="Node" parent="."]
+script = ExtResource("3_udrmt")
+start_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="FSM"]
+script = ExtResource("4_a3jc2")
+
+[node name="Run" type="Node" parent="FSM"]
+script = ExtResource("5_vs1mx")
+
+[node name="Air" type="Node" parent="FSM"]
+script = ExtResource("6_1cudt")

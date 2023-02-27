@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://hbmww48tdd2f"]
+[gd_scene load_steps=3 format=3 uid="uid://ddseskloqsgei"]
 
-[ext_resource type="PackedScene" path="res://player.tscn" id="1_ved16"]
+[ext_resource type="PackedScene" uid="uid://cr2kyb5p02t12" path="res://player.tscn" id="1_jppst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ucop"]
 size = Vector2(1058, 20)
@@ -48,5 +48,5 @@ offset_right = 1048.0
 offset_bottom = 40.0
 color = Color(0.27451, 0.627451, 0.752941, 1)
 
-[node name="character" parent="." instance=ExtResource("1_ved16")]
-position = Vector2(506, -407)
+[node name="Player" parent="." instance=ExtResource("1_jppst")]
+position = Vector2(120, -391)
