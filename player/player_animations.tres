@@ -1,0 +1,216 @@
+[gd_resource type="SpriteFrames" load_steps=45 format=3 uid="uid://bohw2l1ahddsj"]
+
+[ext_resource type="Texture2D" uid="uid://bhtv365u86d8s" path="res://player/Individual Sprite/Fall/Warrior_Fall_1.png" id="1_6irt6"]
+[ext_resource type="Texture2D" uid="uid://bgx3d6h1yfi3r" path="res://player/Individual Sprite/Attack/Warrior_Attack_1.png" id="1_mcthd"]
+[ext_resource type="Texture2D" uid="uid://civobto8aa68u" path="res://player/Individual Sprite/idle/Warrior_Idle_1.png" id="1_qmx80"]
+[ext_resource type="Texture2D" uid="uid://d18l1f8e4akcd" path="res://player/Individual Sprite/idle/Warrior_Idle_2.png" id="2_8exbm"]
+[ext_resource type="Texture2D" uid="uid://ctijd0c83ni6s" path="res://player/Individual Sprite/Fall/Warrior_Fall_2.png" id="2_uhp4i"]
+[ext_resource type="Texture2D" uid="uid://d1p8xtnwi1m4n" path="res://player/Individual Sprite/Attack/Warrior_Attack_2.png" id="2_utyo0"]
+[ext_resource type="Texture2D" uid="uid://cwcg6yunrtjui" path="res://player/Individual Sprite/Attack/Warrior_Attack_3.png" id="3_n2rk5"]
+[ext_resource type="Texture2D" uid="uid://cfvu83c4hbivh" path="res://player/Individual Sprite/Fall/Warrior_Fall_3.png" id="3_seel2"]
+[ext_resource type="Texture2D" uid="uid://gmvegovk5f8c" path="res://player/Individual Sprite/idle/Warrior_Idle_3.png" id="3_xucbn"]
+[ext_resource type="Texture2D" uid="uid://4d4aydjxnb67" path="res://player/Individual Sprite/idle/Warrior_Idle_4.png" id="4_0wuyn"]
+[ext_resource type="Texture2D" uid="uid://b58ku75k6j5qb" path="res://player/Individual Sprite/Attack/Warrior_Attack_4.png" id="4_na7h5"]
+[ext_resource type="Texture2D" uid="uid://baxawffk1o4ob" path="res://player/Individual Sprite/idle/Warrior_Idle_5.png" id="5_3at8p"]
+[ext_resource type="Texture2D" uid="uid://crhuo4xn1wkd0" path="res://player/Individual Sprite/Attack/Warrior_Attack_5.png" id="5_ma5fc"]
+[ext_resource type="Texture2D" uid="uid://brr33oxddgrtd" path="res://player/Individual Sprite/Attack/Warrior_Attack_6.png" id="6_mx4g4"]
+[ext_resource type="Texture2D" uid="uid://bc7ieg0xhs2lf" path="res://player/Individual Sprite/idle/Warrior_Idle_6.png" id="6_vjm54"]
+[ext_resource type="Texture2D" uid="uid://i11hdhwc4cen" path="res://player/Individual Sprite/Run/Warrior_Run_1.png" id="7_36p6d"]
+[ext_resource type="Texture2D" uid="uid://l3woi5tw3ju" path="res://player/Individual Sprite/Attack/Warrior_Attack_7.png" id="7_dj2ek"]
+[ext_resource type="Texture2D" uid="uid://q072lwqcv0rf" path="res://player/Individual Sprite/Run/Warrior_Run_2.png" id="8_nhesf"]
+[ext_resource type="Texture2D" uid="uid://cehvgg5itbbdh" path="res://player/Individual Sprite/Attack/Warrior_Attack_8.png" id="8_upk73"]
+[ext_resource type="Texture2D" uid="uid://c6ygkd8omr44l" path="res://player/Individual Sprite/Run/Warrior_Run_3.png" id="9_27ick"]
+[ext_resource type="Texture2D" uid="uid://n4vnb3g3p0ii" path="res://player/Individual Sprite/Attack/Warrior_Attack_9.png" id="9_b2y04"]
+[ext_resource type="Texture2D" uid="uid://cdsy1ij81ca54" path="res://player/Individual Sprite/Attack/Warrior_Attack_10.png" id="10_1y8gu"]
+[ext_resource type="Texture2D" uid="uid://doo5qddqqoxop" path="res://player/Individual Sprite/Jump/Warrior_Jump_1.png" id="10_cydok"]
+[ext_resource type="Texture2D" uid="uid://b3syw1o2y7rqw" path="res://player/Individual Sprite/Run/Warrior_Run_4.png" id="10_l3ppw"]
+[ext_resource type="Texture2D" uid="uid://djv6nceyr2icd" path="res://player/Individual Sprite/Attack/Warrior_Attack_11.png" id="11_5rii1"]
+[ext_resource type="Texture2D" uid="uid://u7uuls11h5wl" path="res://player/Individual Sprite/Run/Warrior_Run_5.png" id="11_57xdi"]
+[ext_resource type="Texture2D" uid="uid://3jt8vrf5au4g" path="res://player/Individual Sprite/Jump/Warrior_Jump_2.png" id="11_kou7m"]
+[ext_resource type="Texture2D" uid="uid://b3y6uvy6tucjc" path="res://player/Individual Sprite/Run/Warrior_Run_6.png" id="12_cwxj2"]
+[ext_resource type="Texture2D" uid="uid://bvopwrbb2likb" path="res://player/Individual Sprite/Attack/Warrior_Attack_12.png" id="12_d18kh"]
+[ext_resource type="Texture2D" uid="uid://bpkfcb5fjihy1" path="res://player/Individual Sprite/Jump/Warrior_Jump_3.png" id="12_o2tim"]
+[ext_resource type="Texture2D" uid="uid://c0vemuywm7x8e" path="res://player/Individual Sprite/UptoFall/Warrior_UptoFall_1.png" id="13_1fhg7"]
+[ext_resource type="Texture2D" uid="uid://bov0t8akbse46" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_1.png" id="13_l45b6"]
+[ext_resource type="Texture2D" uid="uid://bhn1fwv7anlix" path="res://player/Individual Sprite/Run/Warrior_Run_7.png" id="13_xrnil"]
+[ext_resource type="Texture2D" uid="uid://bwu1hhked8h3l" path="res://player/Individual Sprite/UptoFall/Warrior_UptoFall_2.png" id="14_2tbt4"]
+[ext_resource type="Texture2D" uid="uid://bun5718on2df5" path="res://player/Individual Sprite/Run/Warrior_Run_8.png" id="14_022e3"]
+[ext_resource type="Texture2D" uid="uid://dsckojk7fa6n0" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_2.png" id="14_43eew"]
+[ext_resource type="Texture2D" uid="uid://bc46ieautui0f" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_3.png" id="15_mvkpi"]
+[ext_resource type="Texture2D" uid="uid://43wpxbcv82q6" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_4.png" id="16_ms7im"]
+[ext_resource type="Texture2D" uid="uid://gis2ktfsbroh" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_5.png" id="17_ikwqs"]
+[ext_resource type="Texture2D" uid="uid://wjh6cb1nfw6e" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_6.png" id="18_bsxoh"]
+[ext_resource type="Texture2D" uid="uid://dqs2jf88wn2sv" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_7.png" id="19_vk74j"]
+[ext_resource type="Texture2D" uid="uid://kb4kvbhlkuu4" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_8.png" id="20_hrcme"]
+[ext_resource type="Texture2D" uid="uid://0aab2la21gi1" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_9.png" id="21_uptpg"]
+[ext_resource type="Texture2D" uid="uid://b1ksloa8mio3k" path="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_10.png" id="22_5b2y4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mcthd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_utyo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n2rk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_na7h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ma5fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mx4g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dj2ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_upk73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b2y04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1y8gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5rii1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_d18kh")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_l45b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_43eew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mvkpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ms7im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ikwqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bsxoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vk74j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hrcme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_uptpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5b2y4")
+}],
+"loop": false,
+"name": &"dash_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6irt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uhp4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_seel2")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qmx80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8exbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xucbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0wuyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3at8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vjm54")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cydok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kou7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o2tim")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_1fhg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2tbt4")
+}],
+"loop": true,
+"name": &"jumptofall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_36p6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nhesf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_27ick")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_l3ppw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_57xdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cwxj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xrnil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_022e3")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

@@ -3,50 +3,108 @@
 [ext_resource type="PackedScene" uid="uid://cr2kyb5p02t12" path="res://player/player.tscn" id="1_jppst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ucop"]
-size = Vector2(1058, 20)
+size = Vector2(204, 11)
 
 [node name="world" type="Node2D"]
 position = Vector2(65, 533)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(519, 0)
-shape = SubResource("RectangleShape2D_1ucop")
+position = Vector2(-45, -309)
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 1048.0
-offset_bottom = 40.0
-color = Color(0.27451, 0.627451, 0.752941, 1)
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 194.0
+offset_bottom = 1.0
+color = Color(0.109804, 0.247059, 0.470588, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(92, -4.5)
+shape = SubResource("RectangleShape2D_1ucop")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(2182, -91)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(519, 0)
-shape = SubResource("RectangleShape2D_1ucop")
+position = Vector2(154, -290)
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 1048.0
-offset_bottom = 40.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 194.0
+offset_bottom = 1.0
+color = Color(0.109804, 0.247059, 0.470588, 1)
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(1093, -39)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(519, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(92, -4.5)
 shape = SubResource("RectangleShape2D_1ucop")
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(356, -290)
+
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 1048.0
-offset_bottom = 40.0
-color = Color(0.27451, 0.627451, 0.752941, 1)
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 194.0
+offset_bottom = 1.0
+color = Color(0.109804, 0.247059, 0.470588, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(92, -4.5)
+shape = SubResource("RectangleShape2D_1ucop")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(555, -304)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 194.0
+offset_bottom = 1.0
+color = Color(0.109804, 0.247059, 0.470588, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(92, -4.5)
+shape = SubResource("RectangleShape2D_1ucop")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -51.0
+offset_top = -448.0
+offset_right = -11.0
+offset_bottom = -408.0
+color = Color(0.203922, 0.341176, 0.521569, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 150.0
+offset_top = -448.0
+offset_right = 190.0
+offset_bottom = -408.0
+color = Color(0.203922, 0.341176, 0.521569, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 54.0
+offset_top = -448.0
+offset_right = 94.0
+offset_bottom = -408.0
+color = Color(0.203922, 0.341176, 0.521569, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 221.0
+offset_top = -276.0
+offset_right = 261.0
+offset_bottom = -236.0
+color = Color(0.203922, 0.341176, 0.521569, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 422.0
+offset_top = -276.0
+offset_right = 462.0
+offset_bottom = -236.0
+color = Color(0.203922, 0.341176, 0.521569, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 326.0
+offset_top = -276.0
+offset_right = 366.0
+offset_bottom = -236.0
+color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_jppst")]
 position = Vector2(120, -391)
