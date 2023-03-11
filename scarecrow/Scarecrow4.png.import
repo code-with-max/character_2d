@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wjh6cb1nfw6e"
-path="res://.godot/imported/Warrior_Dash-Attack_6.png-4c9e74d004f192e16616ef7251c6672f.ctex"
+uid="uid://cqjmetp483l76"
+path="res://.godot/imported/Scarecrow4.png-1cd7bb43799dbe0673adcd54fd8c3100.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_6.png"
-dest_files=["res://.godot/imported/Warrior_Dash-Attack_6.png-4c9e74d004f192e16616ef7251c6672f.ctex"]
+source_file="res://scarecrow/Scarecrow4.png"
+dest_files=["res://.godot/imported/Scarecrow4.png-1cd7bb43799dbe0673adcd54fd8c3100.ctex"]
 
 [params]
 

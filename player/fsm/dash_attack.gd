@@ -1,15 +1,31 @@
 # dash_attack.gd
 extends StatePlayer
 
+
+var already_hit: bool
+
 func enter(_msg: Dictionary={}):
+	already_hit = false
 	$"../../Debug_data/VBox/L_state".set_text(name)
+	if player.animation.is_flipped_h():
+		player.dash_attack_zone.set_scale(Vector2(-1, 1))
+	else:
+		player.dash_attack_zone.set_scale(Vector2(1, 1))
 
 
 func inner_physics_process(_delta):
+#	print(player.animation.get_frame())
 	if not player.is_on_floor():
 		state_machine.change_to("Air")
 
 	player.animation.play("dash_attack")
+	
+	
+# TODO use MATCH pattern
+	if player.animation.get_frame() == 3:
+		player.dash_attack_zone.set_monitoring(true)
+	elif player.animation.get_frame() == 5:
+		player.dash_attack_zone.set_monitoring(false)
 	
 	player.velocity.x = move_toward(player.velocity.x, 0, player.DASH_ATTACK_INNERT)
 	player.move_and_slide()
@@ -24,3 +40,11 @@ func _on_animated_sprite_2d_animation_finished():
 		state_machine.change_to("Run")
 	else:
 		state_machine.change_to("Idle")
+
+
+func _on_dash_attack_area_entered(area):
+	if not already_hit:
+		print(area.owner.name)
+		if area.has_method("hit"):
+			area.hit()
+		already_hit = true

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=480
 window/size/viewport_height=270
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [editor_plugins]
@@ -72,6 +73,14 @@ ui_dash_attack={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="player"
+2d_physics/layer_3="npc"
+2d_physics/layer_4="hitboxes"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0

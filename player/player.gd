@@ -14,6 +14,8 @@ const DASH_ATTACK_INNERT = 4
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animation = $AnimatedSprite2D
+#@onready var zones = $Zones
+@onready var dash_attack_zone = $Zones/DashAttack
 
 #func _physics_process(delta):
 #	# Add the gravity.

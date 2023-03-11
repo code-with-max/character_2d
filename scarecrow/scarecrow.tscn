@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://clc6at78te5pr"]
+
+[ext_resource type="Script" path="res://scarecrow/scarecrow.gd" id="1_hkx3p"]
+[ext_resource type="Texture2D" uid="uid://jkxdsglp8ee0" path="res://scarecrow/Scarecrow1.png" id="1_qrq8q"]
+[ext_resource type="Texture2D" uid="uid://dxw08j74hk7eh" path="res://scarecrow/Scarecrow2.png" id="2_6dyc3"]
+[ext_resource type="Texture2D" uid="uid://dkjey6a5tsvcg" path="res://scarecrow/Scarecrow3.png" id="3_ntjxv"]
+[ext_resource type="Texture2D" uid="uid://cqjmetp483l76" path="res://scarecrow/Scarecrow4.png" id="4_y6p1i"]
+[ext_resource type="Texture2D" uid="uid://pmu5hnkbjxwa" path="res://scarecrow/Scarecrow5.png" id="5_mp72q"]
+[ext_resource type="Script" path="res://scarecrow/Front.gd" id="7_rnsp0"]
+[ext_resource type="Script" path="res://scarecrow/Back.gd" id="8_mv4c7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6bf8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qrq8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6dyc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ntjxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y6p1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mp72q")
+}],
+"loop": false,
+"name": &"take_hit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bmx4"]
+size = Vector2(20, 33)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0rlt5"]
+a = Vector2(-1, -10)
+b = Vector2(-6, 21)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cl5wr"]
+a = Vector2(-1, -10)
+b = Vector2(-1, 13)
+
+[node name="Scarecrow" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_hkx3p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6bf8c")
+animation = &"take_hit"
+frame = 4
+frame_progress = 1.0
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 9.5)
+shape = SubResource("RectangleShape2D_4bmx4")
+
+[node name="HitBoxes" type="Node2D" parent="."]
+
+[node name="Front" type="Area2D" parent="HitBoxes"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("7_rnsp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Front"]
+position = Vector2(12, 0)
+shape = SubResource("SegmentShape2D_0rlt5")
+debug_color = Color(0, 1, 0.184314, 0.419608)
+
+[node name="Back" type="Area2D" parent="HitBoxes"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("8_mv4c7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Back"]
+position = Vector2(-5, 0)
+shape = SubResource("SegmentShape2D_cl5wr")
+debug_color = Color(0.984314, 0, 0.101961, 0.419608)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -26.0
+offset_top = -53.0
+offset_right = 14.0
+offset_bottom = -30.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

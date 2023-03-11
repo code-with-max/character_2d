@@ -1,15 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://wfxs3i2kdjay"]
+[gd_scene load_steps=4 format=3 uid="uid://wfxs3i2kdjay"]
 
 [ext_resource type="PackedScene" uid="uid://cr2kyb5p02t12" path="res://player/player.tscn" id="1_jppst"]
+[ext_resource type="PackedScene" uid="uid://clc6at78te5pr" path="res://scarecrow/scarecrow.tscn" id="2_5ksqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ucop"]
 size = Vector2(204, 11)
 
 [node name="world" type="Node2D"]
-position = Vector2(65, 533)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-45, -309)
+position = Vector2(-5, 193)
+collision_mask = 0
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
 offset_left = -10.0
@@ -23,7 +24,8 @@ position = Vector2(92, -4.5)
 shape = SubResource("RectangleShape2D_1ucop")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(154, -290)
+position = Vector2(194, 212)
+collision_mask = 0
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
 offset_left = -10.0
@@ -37,7 +39,8 @@ position = Vector2(92, -4.5)
 shape = SubResource("RectangleShape2D_1ucop")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(356, -290)
+position = Vector2(396, 212)
+collision_mask = 0
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
 offset_left = -10.0
@@ -51,7 +54,8 @@ position = Vector2(92, -4.5)
 shape = SubResource("RectangleShape2D_1ucop")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(555, -304)
+position = Vector2(595, 198)
+collision_mask = 0
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
 offset_left = -10.0
@@ -65,46 +69,49 @@ position = Vector2(92, -4.5)
 shape = SubResource("RectangleShape2D_1ucop")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -51.0
-offset_top = -448.0
-offset_right = -11.0
-offset_bottom = -408.0
+offset_left = -11.0
+offset_top = 54.0
+offset_right = 29.0
+offset_bottom = 94.0
 color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 150.0
-offset_top = -448.0
-offset_right = 190.0
-offset_bottom = -408.0
+offset_left = 190.0
+offset_top = 54.0
+offset_right = 230.0
+offset_bottom = 94.0
 color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
-offset_left = 54.0
-offset_top = -448.0
-offset_right = 94.0
-offset_bottom = -408.0
+offset_left = 94.0
+offset_top = 54.0
+offset_right = 134.0
+offset_bottom = 94.0
 color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
-offset_left = 221.0
-offset_top = -276.0
-offset_right = 261.0
-offset_bottom = -236.0
+offset_left = 261.0
+offset_top = 226.0
+offset_right = 301.0
+offset_bottom = 266.0
 color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="."]
-offset_left = 422.0
-offset_top = -276.0
-offset_right = 462.0
-offset_bottom = -236.0
+offset_left = 462.0
+offset_top = 226.0
+offset_right = 502.0
+offset_bottom = 266.0
 color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="."]
-offset_left = 326.0
-offset_top = -276.0
-offset_right = 366.0
-offset_bottom = -236.0
+offset_left = 366.0
+offset_top = 226.0
+offset_right = 406.0
+offset_bottom = 266.0
 color = Color(0.203922, 0.341176, 0.521569, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_jppst")]
-position = Vector2(120, -391)
+position = Vector2(160, 111)
+
+[node name="Scarecrow" parent="." instance=ExtResource("2_5ksqn")]
+position = Vector2(367, 52)
