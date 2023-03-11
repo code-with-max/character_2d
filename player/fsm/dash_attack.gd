@@ -1,8 +1,10 @@
 # dash_attack.gd
 extends StatePlayer
 
+#const ATTACK_POWER = 30
 
 var already_hit: bool
+var power_modifer: int = 0
 
 func enter(_msg: Dictionary={}):
 	already_hit = false
@@ -43,8 +45,12 @@ func _on_animated_sprite_2d_animation_finished():
 
 
 func _on_dash_attack_area_entered(area):
+	power_modifer = int(player.velocity.x)
+#	if power_modifer < 0:
+#		power_modifer = power_modifer * -1
+	power_modifer = power_modifer * -1 if power_modifer < 0 else power_modifer
 	if not already_hit:
 		print(area.owner.name)
 		if area.has_method("hit"):
-			area.hit()
+			area.hit(player.DASH_ATTACK_POWER + power_modifer)
 		already_hit = true

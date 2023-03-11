@@ -82,11 +82,19 @@ position = Vector2(-5, 0)
 shape = SubResource("SegmentShape2D_cl5wr")
 debug_color = Color(0.984314, 0, 0.101961, 0.419608)
 
-[node name="Label" type="Label" parent="."]
-offset_left = -26.0
-offset_top = -53.0
-offset_right = 14.0
-offset_bottom = -30.0
+[node name="VBox" type="VBoxContainer" parent="."]
+offset_left = -30.0
+offset_top = -104.0
+offset_right = 25.0
+offset_bottom = -48.0
+
+[node name="Label" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Label 1"
+
+[node name="Label2" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Label 2"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

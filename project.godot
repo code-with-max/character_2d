@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Character 2d"
-run/main_scene="res://world.tscn"
+run/main_scene="res://rocky_level/rocky_world.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
