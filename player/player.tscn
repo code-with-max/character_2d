@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cr2kyb5p02t12"]
+[gd_scene load_steps=12 format=3 uid="uid://cr2kyb5p02t12"]
 
 [ext_resource type="Texture2D" uid="uid://b888iplht5f73" path="res://icon.svg" id="1_47hed"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_yd7bv"]
+[ext_resource type="Script" path="res://player/camerapivot.gd" id="3_kdwtu"]
 [ext_resource type="Script" path="res://player/fsm/FSM.gd" id="3_udrmt"]
 [ext_resource type="Script" path="res://player/fsm/idle.gd" id="4_a3jc2"]
 [ext_resource type="Script" path="res://player/fsm/run.gd" id="5_vs1mx"]
@@ -52,7 +53,13 @@ text = "vel"
 layout_mode = 2
 text = "state"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="CameraPivot" type="Marker2D" parent="."]
+position = Vector2(100, 0)
+script = ExtResource("3_kdwtu")
+
+[node name="Camera2D" type="Camera2D" parent="CameraPivot"]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="Zones" type="Node2D" parent="."]
 

@@ -11,6 +11,9 @@ const ATTACK_INNERT = 6
 const DASH_ATTACK_INNERT = 4
 const DASH_ATTACK_POWER = 30
 
+
+signal u_turn
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
