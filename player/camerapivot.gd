@@ -7,6 +7,7 @@ extends Marker2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player.u_turn.connect(_on_player_u_turn)
+	position.x = 80
 
 
 ## Called every frame. 'delta' is the elapsed time since the previous frame.

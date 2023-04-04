@@ -54,12 +54,11 @@ layout_mode = 2
 text = "state"
 
 [node name="CameraPivot" type="Marker2D" parent="."]
-position = Vector2(100, 0)
 script = ExtResource("3_kdwtu")
 
 [node name="Camera2D" type="Camera2D" parent="CameraPivot"]
 position_smoothing_enabled = true
-position_smoothing_speed = 10.0
+position_smoothing_speed = 20.0
 
 [node name="Zones" type="Node2D" parent="."]
 
