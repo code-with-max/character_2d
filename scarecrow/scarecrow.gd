@@ -18,7 +18,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	move_and_slide()
+		move_and_slide()
 
 
 func take_hit(value: int):

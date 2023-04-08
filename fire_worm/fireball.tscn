@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://kkacgfkdmlld"]
+
+[ext_resource type="SpriteFrames" uid="uid://dhk5yrkei0e7w" path="res://fire_worm/fireball_frames.tres" id="1_bv40p"]
+[ext_resource type="Script" path="res://fire_worm/fireball.gd" id="1_m88h7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xwu07"]
+radius = 7.07107
+
+[node name="Fireball" type="Node2D"]
+script = ExtResource("1_m88h7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_bv40p")
+animation = &"explosion"
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 9
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_xwu07")
+
+[node name="LifeTime" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="LifeTime" to="." method="_on_life_time_timeout"]
