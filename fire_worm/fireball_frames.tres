@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://btua0tmdhe4xt"]
+
+[ext_resource type="Texture2D" uid="uid://d2w47p0716aaw" path="res://fire_worm/Sprites/Fire Ball/Move.png" id="1_enov5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj0qe"]
+atlas = ExtResource("1_enov5")
+region = Rect2(0, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd8jn"]
+atlas = ExtResource("1_enov5")
+region = Rect2(46, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1i2n"]
+atlas = ExtResource("1_enov5")
+region = Rect2(92, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifyo2"]
+atlas = ExtResource("1_enov5")
+region = Rect2(138, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqo0r"]
+atlas = ExtResource("1_enov5")
+region = Rect2(184, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1678"]
+atlas = ExtResource("1_enov5")
+region = Rect2(230, 0, 46, 46)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj0qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd8jn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1i2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifyo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqo0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1678")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq6ce8ioc6rca"]
+
+[ext_resource type="Script" path="res://fire_worm/fire_ball.gd" id="1_hrur3"]
+[ext_resource type="SpriteFrames" uid="uid://btua0tmdhe4xt" path="res://fire_worm/fireball_frames.tres" id="1_qdwn4"]
+
+[node name="FireBall" type="Node2D"]
+script = ExtResource("1_hrur3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_qdwn4")
+animation = &"move"
+speed_scale = 1.4

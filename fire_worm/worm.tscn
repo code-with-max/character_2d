@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwfqfe7m086mj"]
+
+[ext_resource type="SpriteFrames" uid="uid://4idrc8wu6o81" path="res://fire_worm/worm_frames.tres" id="1_7add5"]
+[ext_resource type="Script" path="res://fire_worm/worm.gd" id="1_pw021"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4q187"]
+radius = 13.0
+
+[node name="Worm" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_pw021")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_7add5")
+animation = &"idle"
+frame_progress = 0.3967
+speed_scale = 1.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4q187")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -57.0
+offset_right = 19.0
+offset_bottom = -34.0
+
+[node name="HitZones" type="Node2D" parent="."]
+
+[node name="WatchZone" type="Area2D" parent="HitZones"]
+collision_layer = 8
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitZones/WatchZone"]
+polygon = PackedVector2Array(40, 10, 238, 10, 251, -36, 225, -80, 40, -24)
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(32, -6)
+
+[connection signal="body_entered" from="HitZones/WatchZone" to="." method="_on_watch_zone_body_entered"]
