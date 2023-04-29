@@ -26,12 +26,21 @@ func _on_hit_bo_x_area_entered(area: Area2D) -> void:
 	if area.owner.is_in_group("player"):
 		if area.has_method("hit"):
 			area.hit()
-			queue_free()
+			explode()
 
 
 func _on_hit_bo_x_body_entered(body: Node2D) -> void:
-	queue_free()
+	explode()
 
 
 func _on_ttl_timeout() -> void:
+	explode()
+
+
+func explode():
+	animation.play("explode")
+	speed = 10
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
 	queue_free()
