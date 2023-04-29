@@ -16,12 +16,15 @@ enum states {
 
 var current_state = states.IDLE 
 
+var can_shoot: bool = true
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var FireBall = preload("res://fire_worm/fire_ball.tscn")
 
-
+@onready var cool_down = $CoolDown
+@onready var watch_zome = $HitZones/WatchZone
 @onready var animation = $AnimatedSprite2D
 @onready var muzzle = $Muzzle
 
@@ -51,13 +54,28 @@ func _physics_process(delta: float) -> void:
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
 			move_and_slide()
+			
+		states.ATTACK:
+			var targets = watch_zome.get_overlapping_areas()
+			if targets.size() > 0:
+				if can_shoot:
+					print("I see you %s " % targets[0].owner.name)
+					var fireball = FireBall.instantiate()
+					fireball.set_position(muzzle.get_global_position())
+					fireball.set_target(targets[0])
+				#	fireball.position = muzzle.position
+					get_parent().add_child(fireball)
+					cool_down.start()
+					can_shoot = false
+			else:
+				current_state = states.IDLE
+				
 	$Label.set_text(str(current_state))
 
 
-func _on_watch_zone_body_entered(body: Node2D) -> void:
-	print("I see you %s " % body.name)
-	var fireball = FireBall.instantiate()
-	fireball.set_position(muzzle.get_global_position())
-	fireball.set_target(body)
-#	fireball.position = muzzle.position
-	get_parent().add_child(fireball)
+func _on_watch_zone_area_entered(area: Area2D) -> void:
+	current_state = states.ATTACK
+
+
+func _on_cool_down_timeout() -> void:
+	can_shoot = true

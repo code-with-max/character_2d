@@ -43,7 +43,7 @@ b = Vector2(-6, 21)
 a = Vector2(-1, -10)
 b = Vector2(-1, 13)
 
-[node name="Scarecrow" type="CharacterBody2D"]
+[node name="Scarecrow" type="CharacterBody2D" groups=["npc"]]
 collision_layer = 4
 script = ExtResource("1_hkx3p")
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cr2kyb5p02t12"]
+[gd_scene load_steps=14 format=3 uid="uid://cr2kyb5p02t12"]
 
 [ext_resource type="Texture2D" uid="uid://b888iplht5f73" path="res://icon.svg" id="1_47hed"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_yd7bv"]
 [ext_resource type="Script" path="res://player/camerapivot.gd" id="3_kdwtu"]
 [ext_resource type="Script" path="res://player/fsm/FSM.gd" id="3_udrmt"]
+[ext_resource type="Script" path="res://player/HitBox.gd" id="4_8mwvv"]
 [ext_resource type="Script" path="res://player/fsm/idle.gd" id="4_a3jc2"]
 [ext_resource type="Script" path="res://player/fsm/run.gd" id="5_vs1mx"]
 [ext_resource type="Script" path="res://player/fsm/air.gd" id="6_1cudt"]
@@ -15,7 +16,10 @@
 radius = 9.0
 height = 42.0
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mne7h"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_yd7bv")
 
@@ -62,7 +66,7 @@ position_smoothing_speed = 20.0
 
 [node name="Zones" type="Node2D" parent="."]
 
-[node name="DashAttack" type="Area2D" parent="Zones"]
+[node name="DashAttack" type="Area2D" parent="Zones" groups=["player"]]
 collision_layer = 8
 collision_mask = 8
 monitoring = false
@@ -70,6 +74,16 @@ monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Zones/DashAttack"]
 polygon = PackedVector2Array(-11, -13, 8, -16, 22, -11, 34, 1, 34, 7, 25, 18, 10, 16, 5, 13)
+
+[node name="HitBox" type="Area2D" parent="Zones"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_8mwvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zones/HitBox"]
+shape = SubResource("CapsuleShape2D_mne7h")
+debug_color = Color(0.211765, 0.639216, 0.156863, 0.419608)
 
 [node name="FSM" type="Node" parent="."]
 script = ExtResource("3_udrmt")

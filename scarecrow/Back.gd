@@ -11,7 +11,7 @@ func _process(_delta):
 	pass
 
 
-func hit(value:int = 0):
+func hit(value: int = 0):
 #	if value > 10:
 #		value = value - 10
 	value -= 10 if value > 10 else value
