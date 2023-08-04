@@ -30,7 +30,14 @@ texture = ExtResource("1_47hed")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_1vani")
 
-[node name="Debug_data" type="Control" parent="."]
+[node name="CameraPivot" type="Marker2D" parent="."]
+script = ExtResource("3_kdwtu")
+
+[node name="Camera2D" type="Camera2D" parent="CameraPivot"]
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="Debug_data" type="Control" parent="CameraPivot/Camera2D"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -1.0
@@ -38,31 +45,24 @@ offset_top = 1.0
 offset_right = -1.0
 offset_bottom = 1.0
 
-[node name="VBox" type="VBoxContainer" parent="Debug_data"]
+[node name="VBox" type="VBoxContainer" parent="CameraPivot/Camera2D/Debug_data"]
 layout_mode = 0
 offset_left = -227.0
 offset_top = -123.0
 offset_right = -160.0
 offset_bottom = -36.0
 
-[node name="L_dir" type="Label" parent="Debug_data/VBox"]
+[node name="L_dir" type="Label" parent="CameraPivot/Camera2D/Debug_data/VBox"]
 layout_mode = 2
 text = "dir"
 
-[node name="L_vel" type="Label" parent="Debug_data/VBox"]
+[node name="L_vel" type="Label" parent="CameraPivot/Camera2D/Debug_data/VBox"]
 layout_mode = 2
 text = "vel"
 
-[node name="L_state" type="Label" parent="Debug_data/VBox"]
+[node name="L_state" type="Label" parent="CameraPivot/Camera2D/Debug_data/VBox"]
 layout_mode = 2
 text = "state"
-
-[node name="CameraPivot" type="Marker2D" parent="."]
-script = ExtResource("3_kdwtu")
-
-[node name="Camera2D" type="Camera2D" parent="CameraPivot"]
-position_smoothing_enabled = true
-position_smoothing_speed = 20.0
 
 [node name="Zones" type="Node2D" parent="."]
 

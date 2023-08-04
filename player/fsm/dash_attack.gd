@@ -8,7 +8,7 @@ var power_modifer: int = 0
 
 func enter(_msg: Dictionary={}):
 	already_hit = false
-	$"../../Debug_data/VBox/L_state".set_text(name)
+	$"../../CameraPivot/Camera2D/Debug_data/VBox/L_state".set_text(name)
 	if player.animation.is_flipped_h():
 		player.dash_attack_zone.set_scale(Vector2(-1, 1))
 	else:

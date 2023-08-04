@@ -3,7 +3,7 @@ extends StatePlayer
 
 
 func enter(_msg: Dictionary={}):
-	$"../../Debug_data/VBox/L_state".set_text(name)
+	$"../../CameraPivot/Camera2D/Debug_data/VBox/L_state".set_text(name)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
