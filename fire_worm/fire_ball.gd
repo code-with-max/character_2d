@@ -20,3 +20,19 @@ func _physics_process(delta: float) -> void:
 
 func set_target(_body):
 	target = _body
+
+
+func explode():
+	animation.play("explode")
+
+
+func _on_timer_timeout():
+	explode()
+
+
+func _on_animated_sprite_2d_animation_finished():
+	queue_free()
+
+
+func _on_hit_box_body_entered(body):
+	explode()
